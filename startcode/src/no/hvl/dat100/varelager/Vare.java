@@ -1,53 +1,69 @@
 package no.hvl.dat100.varelager;
 
-public class Vare {
-
-	// TODO - objektvariable
+	public class Vare {
 	
-	public Vare(int varenr, String navn, double pris) {
+		private int varenr;
+		private String navn; 
+		private double pris;
 		
-		throw new TODO("Vare"); // REMOVE ME WHEN DONE
-	}
+		public Vare(int varenr, String navn, double pris) {
+			
+			this.varenr = varenr;
+			this.navn = navn;
+			this.pris = pris;
+			
+		}
 	
 	public int getVarenr() {
 		
-		throw new TODO("getVarenr");
+		return varenr; 
 		
 	}
 	
 	public void setVarenr(int varenr) {
 		
-		throw new TODO("setVarenr");
+		this.varenr = varenr;
 	}
 	
 	public String getNavn() {
 		
-		throw new TODO("getNavn");
+		return navn;
 	}
 	
 	public void setNavn(String navn) {
 		
-		throw new TODO("setNavn");
+		this.navn = navn;
 	}
 	
 	public double getPris() {
 		
-		throw new TODO("getPris");
+		return pris;
 	}
 	
 	public void setPris(double pris) {
 		
-		throw new TODO("setPris");
+		this.pris = pris;
 	}
 	
 	public double beregnMoms() {
 		
-		throw new TODO("beregnMoms");
+		double moms = 0;
+		moms = this.pris * 0.2;
+		return moms;
+		
 	}
 	
 	public String toString() {
 		
-		throw new TODO("toString");
+		String svar; 
+		String pris = Double.toString(this.pris);
+		String varenr = Integer.toString(this.varenr);
+		String navn = this.navn;
+		
+		svar = "Vare [varenr=" + varenr + ", navn=" + navn + ", pris=" + pris + "]";
+		
+		return svar;
+		
 	}
 	
 	public boolean erBilligereEnn(Vare v) {
