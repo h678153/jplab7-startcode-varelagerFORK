@@ -68,7 +68,13 @@ package no.hvl.dat100.varelager;
 	
 	public boolean erBilligereEnn(Vare v) {
 		
-		throw new TODO("erBilligereEnn");
+		boolean svar = false;
+		if (v.pris > this.pris) {
+			svar = true;
+			return svar;
+		} else {
+			return svar;
+		}
 	}
 	
 }
